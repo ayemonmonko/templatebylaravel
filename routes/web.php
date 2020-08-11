@@ -13,14 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');//data show page
-Route::get('about', function () {
-    return view('aboutpage');
-})->name('aboutname');
-Route::get('/','Pagecontro@homefun')->name('home');
-Route::get('about', 'Pagecontro@aboutfun')->name('about');
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('home');//data show page
+// Route::get('about', function () {
+//     return view('aboutpage');
+// })->name('aboutname');
+Route::get('/','PageContro@homefun')->name('home');
+Route::get('about', 'PageContro@aboutfun')->name('about');
 
-Route::get('contact', 'Pagecontro@contactfun')->name('contact');
-Route::get('samplepost', 'Pagecontro@samplepostfun')->name('samplepost');
+Route::get('contact', 'PageContro@contactfun')->name('contact');
+Route::get('samplepost', 'PageContro@samplepostfun')->name('samplepost');
